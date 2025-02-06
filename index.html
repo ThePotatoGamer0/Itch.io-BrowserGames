@@ -1,15 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Itch.io BrowserGames</title>
+    <title>Itch.io BrowserGames</title>
+    <style>
+        .image-container {
+          display: flex; /* Use flexbox for better layout */
+          flex-wrap: wrap; /* Allow images to wrap onto new rows */
+          justify-content: space-between; /* Evenly space images */
+          margin: 10px;
+        }
+    
+        .image-item { /* New container for each image */
+          flex: 0 0 33.33%; /* Allocate equal space for each image */
+          margin-bottom: 10px; /* Add space between rows */
+          display: flex; /* Make image-item a flex container */
+          flex-direction: column; /* Stack image and button vertically */
+          align-items: center; /* Center the button horizontally */
+        }
+    
+        .dynamic-image {
+          max-width: 100%; 
+          height: auto; 
+          margin-bottom: 10px; /* Add space between image and button */
+        }
+    
+        .image-item button {
+          padding: 10px 20px; /* Add padding to the button */
+          border-radius: 25px;
+          font-size: 25px;
+        }
+      </style>
 </head>
 <body>
-    <h1>Hello! Welcome to Itch.io Browser games you're a bit early nothings here yet!</h1>
-    <p>I was made by ThePotatoGamer0!</p>
-    <div>
-    <img src="./wbwwb/WBWWB.png">
-    <a href="./wbwwb/index.html">
-        <button style="font-size:25px; border-radius:25px;">We are what we behold</button>
-    </a>
-    </div>
+    <h1>Hello! Welcome to Itch.io Browser games</h1>
+    <p>This is a WIP i am making in my free time so please be patient for new games!</p>
+
+    <div class="image-container">
+        <div class="image-item">
+          <img src="./wbwwb/WBWWB.png" alt="Image 1" class="dynamic-image">
+          <a href="./wbwwb/index.html">
+            <button>We become what we behold</button>
+          </a>
+        </div>
+    
+        <div class="image-item">
+          <img src="./poom/poom.png" alt="Image 2" class="dynamic-image">
+          <a href="./poom/index.html">
+            <button>Poom (Doom HTML5)</button>
+          </a>
+        </div>
+    
+        <div class="image-item">
+          <img src="./nogame.png" alt="Image 3" class="dynamic-image">
+          <a href="./index.html">
+            <button>No Game</button>
+          </a>
+        </div>
+      </div>
+    
+      <script>
+        window.addEventListener('resize', function() {
+          const images = document.querySelectorAll('.dynamic-image');
+    
+          images.forEach(image => {
+            const containerWidth = image.parentElement.offsetWidth;
+            image.style.width = containerWidth + 'px';
+          });
+        });
+    
+        window.onload = function() {
+          const images = document.querySelectorAll('.dynamic-image');
+    
+          images.forEach(image => {
+            const containerWidth = image.parentElement.offsetWidth;
+            image.style.width = containerWidth + 'px';
+          });
+        };
+      </script>
+        <p>Made By yours truly, ThePotatoGamer0.</p>
 </body>
