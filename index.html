@@ -22,18 +22,39 @@
           max-width: 100%; 
           height: auto; 
           margin-bottom: 10px; /* Add space between image and button */
+          border-radius: 100px;
         }
-    
+        
+        .ItchioLogo {
+          max-width: 10%;
+          max-height: 10%;
+          height: auto; 
+          margin-right: 10px; /* Add space between image and button */
+        }
+
         .image-item button {
           padding: 10px 20px; /* Add padding to the button */
           border-radius: 25px;
           font-size: 25px;
         }
+
+        .header {
+          display: flex;
+          align-items: center;
+        }
+
+        .header-text {
+        }
       </style>
 </head>
 <body style="background-color:#222222; font-family: verdana; color:#FFFFFF;">
-    <h1>Hello! Welcome to Itch.io Browser games</h1>
-    <p>This is a WIP i am making in my free time so please be patient for new games!</p>
+    <div class="header">
+      <img src="./itchiologo.png" alt="Itch.io Logo" class="ItchioLogo">
+      <div class="header-text">
+        <h1>Hello! Welcome to Itch.io Browser games</h1>
+        <p>This is a WIP i am making in my free time so please be patient for new games!</p>
+      </div>
+    </div>
 
     <div class="image-container">
       <div class="image-item">
